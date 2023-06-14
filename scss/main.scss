@@ -1,0 +1,292 @@
+@import "variables", "reset", "mixins";
+
+body {
+  width: 100%;
+  background-color: $veryDarkBlue;
+  // overflow-x: hidden;
+}
+
+.main-header {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  @media (min-width: 580px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 120rem;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .title {
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 0.1rem solid $desaturatedBlue;
+    padding: 1rem 0 1.5rem;
+    @media (min-width: 580px) {
+      border-bottom: none;
+    }
+    .main-heading {
+      color: $white;
+      font-size: clamp(2rem, 6vw, 2.6rem);
+      font-weight: bold;
+    }
+    .total-followers {
+      color: $desaturatedBlue;
+      padding: 0.5rem 0;
+      font-size: clamp(1rem, 6vw, 1.6rem);
+      font-weight: bold;
+    }
+  }
+  .toggle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    .theme-mode {
+      color: $desaturatedBlue;
+      padding: 0.5rem 0;
+      font-size: clamp(1rem, 6vw, 1.6rem);
+      font-weight: bold;
+      @media (min-width: 580px) {
+        margin-right: 2rem;
+      }
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 6rem;
+      height: 3rem;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $darkTheme;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 2.2rem;
+      width: 2.2rem;
+      left: 0.4rem;
+      bottom: 0.4rem;
+      background-color: $veryDarkBlue;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background: #ccc;
+      color: $white;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 0.1rem #2196f3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(2.6rem);
+      -ms-transform: translateX(2.6rem);
+      transform: translateX(2.6rem);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 3.4rem;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    @media (min-width: 580px) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+//////////////
+.transition {
+  transition: 0.3s;
+}
+//////////////
+.hero {
+  width: 100%;
+  max-width: 120rem;
+  padding: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  margin: 0 auto;
+  .facebook {
+    border-top: 0.5rem solid $facebookColor;
+  }
+  .twitter {
+    border-top: 0.5rem solid $twitterColor;
+  }
+  .instagram {
+    .top-border {
+      height: 0.5rem;
+      width: 100%;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background: $instagramColor;
+    }
+  }
+  .youtube {
+    border-top: 0.5rem solid $youtubeColor;
+  }
+  .social-media-platform {
+    width: 100%;
+    max-width: 27rem;
+    height: auto;
+    margin: 2rem auto;
+    background-color: $darkDesaturatedBlue;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(54, 59, 85);
+    }
+    .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      .platform-icon {
+        @include platformIcon;
+      }
+      .user-name {
+        color: $desaturatedBlue;
+        font-size: 1.2rem;
+      }
+    }
+    .followers {
+      @extend .user;
+      flex-direction: column;
+      padding: 0 1rem 2rem;
+      .number-of-followers {
+        font-size: 6rem;
+        color: $white;
+        font-weight: bold;
+      }
+      .follow-title {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $desaturatedBlue;
+      }
+    }
+    .gain-today {
+      @include gainToday;
+      .arrow-up {
+        @include arrowUp;
+      }
+    }
+    .lost-today {
+      @include lostToday;
+      .arrow-down {
+        @include arrowDown;
+      }
+    }
+  }
+}
+//////////////////
+.overview {
+  color: $white;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  font-weight: bold;
+  padding: 2rem;
+
+  @media (min-width: 580px) {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+.overview-today-statistics {
+  width: 100%;
+  max-width: 120rem;
+  padding: 1rem;
+  display: grid;
+  justify-items: center;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  margin: 0 auto;
+  .statistics {
+    width: 100%;
+    background-color: $darkDesaturatedBlue;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 12rem;
+    max-width: 30rem;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(54, 59, 85);
+    }
+    .type {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .type-heading {
+        color: $desaturatedBlue;
+        font-size: clamp(1rem, 6vw, 1.3rem);
+        font-weight: bold;
+      }
+      .platform-icon {
+        @include platformIcon;
+      }
+    }
+    .numbers {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .follow {
+        font-size: 3rem;
+        color: $white;
+        font-weight: bold;
+      }
+      .gain-today {
+        @include gainToday;
+        padding: 0;
+        .arrow-up {
+          @include arrowUp;
+        }
+      }
+      .lost-today {
+        padding: 0;
+        @include lostToday;
+        .arrow-down {
+          @include arrowDown;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Social media dashboard</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script src="app.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- /////////// -->
+    <header class="main-header">
+      <div class="title">
+        <h1 class="main-heading">Social Media Dashboard</h1>
+        <p class="total-followers">Total Followers: 23,004</p>
+      </div>
+      <div class="toggle-container">
+        <h3 class="theme-mode">Dark Mode</h3>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <!-- ///////// -->
+    <main class="hero">
+      <!-- /////////////// -->
+      <div class="social-media-platform facebook">
+        <div class="user">
+          <img
+            src="./images/icon-facebook.svg"
+            alt="facebook icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+          <span class="user-name">@nathanf</span>
+        </div>
+        <div class="followers">
+          <h2 class="number-of-followers">1987</h2>
+          <h5 class="follow-title">followers</h5>
+        </div>
+        <span class="gain-today">
+          <img
+            src="./images/icon-up.svg"
+            alt="icon arrow up"
+            class="arrow-up"
+            width="10"
+            height="10px"
+          />
+          12 Today
+        </span>
+      </div>
+      <!-- ///////////// -->
+      <div class="social-media-platform twitter">
+        <div class="user">
+          <img
+            src="./images/icon-twitter.svg"
+            alt="twitter icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+          <span class="user-name">@nathanf</span>
+        </div>
+        <div class="followers">
+          <h2 class="number-of-followers">1044</h2>
+          <h5 class="follow-title">followers</h5>
+        </div>
+        <span class="gain-today">
+          <img
+            src="./images/icon-up.svg"
+            alt="icon arrow up"
+            class="arrow-up"
+            width="10"
+            height="10px"
+          />
+          99 Today
+        </span>
+      </div>
+      <!-- ///////////// -->
+      <div class="social-media-platform instagram">
+        <div class="top-border"></div>
+        <div class="user">
+          <img
+            src="./images/icon-instagram.svg"
+            alt="instagram icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+          <span class="user-name">@realnathanf</span>
+        </div>
+        <div class="followers">
+          <h2 class="number-of-followers">11k</h2>
+          <h5 class="follow-title">followers</h5>
+        </div>
+        <span class="gain-today">
+          <img
+            src="./images/icon-up.svg"
+            alt="icon arrow up"
+            class="arrow-up"
+            width="10"
+            height="10px"
+          />
+          1099 Today
+        </span>
+      </div>
+      <!-- ///////////// -->
+      <div class="social-media-platform youtube">
+        <div class="user">
+          <img
+            src="./images/icon-youtube.svg"
+            alt="youtube icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+          <span class="user-name">Nathan F.</span>
+        </div>
+        <div class="followers">
+          <h2 class="number-of-followers">8239</h2>
+          <h5 class="follow-title">subscribers</h5>
+        </div>
+        <span class="lost-today">
+          <img
+            src="./images/icon-down.svg"
+            alt="icon arrow down"
+            class="arrow-down"
+            width="10"
+            height="10px"
+          />
+          144 Today
+        </span>
+      </div>
+      <!-- //////////// -->
+    </main>
+    <!-- ////////// -->
+    <h3 class="overview">Overview - Today</h3>
+    <!-- ///////////////// -->
+    <section class="overview-today-statistics">
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Page Views</h6>
+          <img
+            src="./images/icon-facebook.svg"
+            alt="facebook icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">87</h4>
+          <span class="gain-today">
+            <img
+              src="./images/icon-up.svg"
+              alt="icon arrow up"
+              class="arrow-up"
+              width="10"
+              height="10px"
+            />
+            3%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Likes</h6>
+          <img
+            src="./images/icon-facebook.svg"
+            alt="facebook icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">52</h4>
+          <span class="lost-today">
+            <img
+              src="./images/icon-down.svg"
+              alt="icon arrow down"
+              class="arrow-down"
+              width="10"
+              height="10px"
+            />
+            2%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Likes</h6>
+          <img
+            src="./images/icon-instagram.svg"
+            alt="instagram icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">5462</h4>
+          <span class="gain-today">
+            <img
+              src="./images/icon-up.svg"
+              alt="icon arrow up"
+              class="arrow-up"
+              width="10"
+              height="10px"
+            />
+            2257%
+          </span>
+        </div>
+      </div>
+
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Profile Views</h6>
+          <img
+            src="./images/icon-instagram.svg"
+            alt="instagram icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">52k</h4>
+          <span class="gain-today">
+            <img
+              src="./images/icon-up.svg"
+              alt="icon arrow up"
+              class="arrow-up"
+              width="10"
+              height="10px"
+            />
+            1375%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Retweets</h6>
+          <img
+            src="./images/icon-twitter.svg"
+            alt="twitter icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">117</h4>
+          <span class="gain-today">
+            <img
+              src="./images/icon-up.svg"
+              alt="icon arrow up"
+              class="arrow-up"
+              width="10"
+              height="10px"
+            />
+            303%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Likes</h6>
+          <img
+            src="./images/icon-twitter.svg"
+            alt="twitter icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">507</h4>
+          <span class="gain-today">
+            <img
+              src="./images/icon-up.svg"
+              alt="icon arrow up"
+              class="arrow-up"
+              width="10"
+              height="10px"
+            />
+            553%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Likes</h6>
+          <img
+            src="./images/icon-youtube.svg"
+            alt="youtube icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">107</h4>
+          <span class="lost-today">
+            <img
+              src="./images/icon-down.svg"
+              alt="icon arrow down"
+              class="arrow-down"
+              width="10"
+              height="10px"
+            />
+            19%
+          </span>
+        </div>
+      </div>
+      <!-- /////////// -->
+      <div class="statistics">
+        <div class="type">
+          <h6 class="type-heading">Total Views</h6>
+          <img
+            src="./images/icon-youtube.svg"
+            alt="youtube icon"
+            class="platform-icon"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="numbers">
+          <h4 class="follow">1407</h4>
+          <span class="lost-today">
+            <img
+              src="./images/icon-down.svg"
+              alt="icon arrow down"
+              class="arrow-down"
+              width="10"
+              height="10px"
+            />
+            12%
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/marian-irinel-raileanu-1a4088206/"
+        target="_blank"
+        >Marian</a
+      >.
+    </div> -->
+  </body>
+</html>

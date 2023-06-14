@@ -1,0 +1,25 @@
+@mixin gainToday {
+  @extend .user;
+  padding: 0 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $primaryColor1;
+  display: block;
+  text-align: center;
+}
+@mixin arrowUp {
+  width: 1rem;
+  height: 0.6rem;
+}
+@mixin lostToday {
+  @extend .gain-today;
+  color: $primaryColor2;
+}
+@mixin arrowDown {
+  width: 1rem;
+  height: 0.6rem;
+}
+@mixin platformIcon {
+  width: 2rem;
+  height: 2rem;
+}
